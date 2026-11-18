@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // Rutas de solicitudes
 app.use('/api/solicitudes', solicitudesRouter);
 
-const PORT = process.env.API_PORT || 3000;
+const PORT = process.env.PORT || process.env.API_PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Servidor SoporteEscolar activo en puerto ${PORT}`);
